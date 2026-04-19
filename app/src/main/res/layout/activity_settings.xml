@@ -10,11 +10,11 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/primary"
+        android:background="@color/background"
         app:title="@string/settings_title"
-        app:titleTextColor="@color/accent"
+        app:titleTextColor="@color/text_primary"
         app:navigationIcon="?attr/homeAsUpIndicator"
-        app:navigationIconTint="@color/accent" />
+        app:navigationIconTint="@color/text_primary" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -38,9 +38,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/card_bg"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
                 android:layout_marginBottom="16dp">
 
                 <LinearLayout
@@ -154,9 +154,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/card_bg"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
                 android:layout_marginBottom="24dp">
 
                 <LinearLayout

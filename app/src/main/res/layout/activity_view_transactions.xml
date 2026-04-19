@@ -10,19 +10,19 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/primary"
+        android:background="@color/background"
         app:title="@string/transactions_title"
-        app:titleTextColor="@color/accent"
+        app:titleTextColor="@color/text_primary"
         app:navigationIcon="?attr/homeAsUpIndicator"
-        app:navigationIconTint="@color/accent" />
+        app:navigationIconTint="@color/text_primary" />
 
     <!-- Summary bar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/primary_dark"
+        android:background="@color/surface"
         android:orientation="horizontal"
-        android:padding="12dp">
+        android:padding="16dp">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -34,24 +34,26 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total"
-                android:textColor="#B0C4A8"
-                android:textSize="11sp" />
+                android:text="TOTAL"
+                android:textColor="@color/text_secondary"
+                android:textSize="10sp"
+                android:letterSpacing="0.1" />
 
             <TextView
                 android:id="@+id/tvTotalSummary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="PKR 0"
-                android:textColor="@color/accent"
+                android:textColor="@color/primary"
                 android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <View
             android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="#5A6650" />
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/divider" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -63,16 +65,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Count"
-                android:textColor="#B0C4A8"
-                android:textSize="11sp" />
+                android:text="COUNT"
+                android:textColor="@color/text_secondary"
+                android:textSize="10sp"
+                android:letterSpacing="0.1" />
 
             <TextView
                 android:id="@+id/tvCountSummary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0 items"
-                android:textColor="@color/accent"
+                android:textColor="@color/secondary"
                 android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
