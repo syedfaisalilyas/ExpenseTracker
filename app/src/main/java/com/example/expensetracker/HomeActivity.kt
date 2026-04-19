@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -58,7 +59,11 @@ class HomeActivity : AppCompatActivity() {
         DataManager.loadAll(applicationContext)
         refreshUI()
         val filter = IntentFilter(DataUpdateReceiver.ACTION_DATA_UPDATED)
-        registerReceiver(dataReceiver, filter, Context.RECEIVER_NOT_EXPORTED)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(dataReceiver, filter, Context.RECEIVER_NOT_EXPORTED)
+        } else {
+            registerReceiver(dataReceiver, filter)
+        }
     }
 
     override fun onResume() {

@@ -95,12 +95,11 @@ class BarChartView @JvmOverloads constructor(
                 textAlign = Paint.Align.RIGHT
             }
             canvas.drawText(formatShort(value), paddingLeft - 6f, y + 8f, yLabelPaint)
-            canvas.drawLine(paddingLeft, y, w - paddingRight, y, Paint.apply {  }.let {
-                Paint(Paint.ANTI_ALIAS_FLAG).apply {
-                    color = Color.parseColor("#EEEEEE")
-                    strokeWidth = 1f
-                }
-            })
+            val gridPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+                color = Color.parseColor("#EEEEEE")
+                strokeWidth = 1f
+            }
+            canvas.drawLine(paddingLeft, y, w - paddingRight, y, gridPaint)
         }
 
         // Draw target line
